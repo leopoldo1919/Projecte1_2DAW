@@ -10,3 +10,45 @@
 h1{
     color: red;
 }
+.botones-portada{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #aa0404;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+.botones-portada:hover {background-color: #3e8e41}
+
+.botones-portada:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.botones-vuelta{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #aa0404;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+.botones-vuelta:hover {background-color: #3e8e41}
+
+.botones-vuelta:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
