@@ -1,3 +1,6 @@
+body{
+  margin: 0;
+}
 .video-fondo {
     position: absolute;
     top: 0;
@@ -7,48 +10,95 @@
     object-fit: cover;
     z-index: -1;
 }
-h1{
-    color: red;
+.caixaDeBotonsPortada{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
+.sombreadoH1{
+  background: linear-gradient(transparent,#000, transparent);
+}
+
 .botones-portada{
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
+    padding: 20px;
+    font-size: 20px;
     cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #aa0404;
     border: none;
+    text-align: center;    
+    color: #000a;
+    background-image: linear-gradient(to left, #4AEAFF,#4AEAFF, #FF81FF,#FF81FF,#FFD655,#FFD655,#4AEAFF,#4AEAFF);    
+    background-clip: padding-box;
+    animation: color 2s linear infinite;
+    background-size: 500%;
     border-radius: 15px;
     box-shadow: 0 9px #999;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
 }
-.botones-portada:hover {background-color: #3e8e41}
+.botones-portada:hover {
+  background-color: #29ff50;
+  background-image: none;
+}
 
 .botones-portada:active {
-  background-color: #3e8e41;
+  background-color: #29ff50;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 .botones-vuelta{
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #aa0404;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  text-align: center;    
+  color: #000a;
+  background-image: linear-gradient(to left, #4AEAFF,#4AEAFF, #FF81FF,#FF81FF,#FFD655,#FFD655,#4AEAFF,#4AEAFF);    
+  background-clip: padding-box;
+  animation: color 2s linear infinite;
+  background-size: 500%;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
 }
-.botones-vuelta:hover {background-color: #3e8e41}
+.botones-vuelta:hover {
+  background-color: #29ff50;
+  background-image: none; 
+}
 
 .botones-vuelta:active {
-  background-color: #3e8e41;
+  background-color: #29ff50;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+.fondo_animado {
+  font-size: 100px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: transparent;
+  background-image: linear-gradient(to left, #4AEAFF,#4AEAFF, #FF81FF,#FF81FF,#FFD655,#FFD655,#4AEAFF,#4AEAFF);    
+  background-clip: text;
+  animation: color 2s linear infinite;
+  background-size: 500%;  
+  margin-top: 225px;  
+}
+
+@keyframes color {
+  from {
+      background-position: 0% 50%;
+  }
+
+  to {
+      background-position: 100% 50%;
+  }
+}
+.caixaDeBotonsJoc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
