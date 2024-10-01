@@ -1,5 +1,6 @@
 body{
   margin: 0;
+  font-family: 'Times New Roman', Times, serifs;
 }
 .video-fondo {
     position: absolute;
@@ -36,16 +37,19 @@ body{
     align-items: center;
     justify-content: center;
     width: 250px;
+    text-transform: uppercase;
 }
 .botones-portada:hover {
   background-color: #29ff50;
   background-image: none;
+  text-transform: uppercase;
 }
 
 .botones-portada:active {
   background-color: #29ff50;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+  text-transform: uppercase;
 }
 .botones-vuelta{
   padding: 20px;
@@ -63,16 +67,19 @@ body{
   align-items: center;
   justify-content: center;
   width: 250px;
+  text-transform: uppercase;
 }
 .botones-vuelta:hover {
   background-color: #29ff50;
   background-image: none; 
+  text-transform: uppercase;
 }
 
 .botones-vuelta:active {
   background-color: #29ff50;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+  text-transform: uppercase;
 }
 .fondo_animado {
   font-size: 100px;
@@ -101,4 +108,43 @@ body{
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+.body_principal{
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+
+  
+}
+.input_class,.input_submit{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  border: 1px solid #999;
+  box-shadow: 0 0 20px #0004;
+  background-color: #fff9;
+}
+.Nom_canço{
+  padding: 10px 20px;
+  display: grid;
+  align-items: center;
+}
+.from_afegirCanço{
+  background-image: linear-gradient(to left, #4aeaffaa,#4AEAFFaa, #FF81FFaa,#FF81FFaa,#FFD655aa,#FFD655aa,#4AEAFFaa,#4AEAFFaa);    
+  background-clip: padding-box;
+  animation: color 2s linear infinite;
+  background-size: 500%;
+  padding: 40px 0;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0px 0px 60px #000f;
+  margin-top: 150px;
+}
+h2{
+  text-align: center;
+}
+.file_buton{
+  color: #29ff50;
+  width: 222px;
+  margin: auto;
+  padding-bottom: 15px;
 }
