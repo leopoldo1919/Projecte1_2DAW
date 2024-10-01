@@ -11,7 +11,7 @@ body{
     object-fit: cover;
     z-index: -1;
 }
-.caixaDeBotonsPortada{
+.caixaDeBotonsPortada, .caixaDeBotonsLlistatCançons{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,12 +139,57 @@ body{
   box-shadow: 0px 0px 60px #000f;
   margin-top: 150px;
 }
+.cuadreRanking, .cuadreLlistatCansons{
+  background-image: linear-gradient(to left, #4aeaffaa,#4AEAFFaa, #FF81FFaa,#FF81FFaa,#FFD655aa,#FFD655aa,#4AEAFFaa,#4AEAFFaa);    
+  background-clip: padding-box;
+  animation: color 2s linear infinite;
+  background-size: 500%;
+  padding: 40px 0;
+  max-width: 600px;
+  max-height: 250px;
+  margin: auto;
+  box-shadow: 0px 0px 60px #000f;
+  margin-top: 150px;
+}
 h2{
   text-align: center;
+  color: #000000;
+  font-size: 40px;
 }
 .file_buton{
-  color: #29ff50;
-  width: 222px;
+  color: #ffffff;
+  width: auto;
   margin: auto;
   padding-bottom: 15px;
+}
+.llistatRanking{
+  font-size: 20px;
+}
+.jugarCanço{
+  background-color: #29ff50;
+}
+.editarCanço{
+  background-color: #eeaa00;
+}
+.eliminarCanço{
+  background-color: #ff2950;
+}
+.jugarCanço,.editarCanço,.eliminarCanço{
+    padding: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    text-align: center;    
+    color: #000a;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    text-transform: uppercase;
+}
+.jugarCanço:active,.editarCanço:active,.eliminarCanço:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  text-transform: uppercase;
 }
