@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="estilsDelProjecte.css">
     <link rel="icon" href="iconoPortada.png" type="image/png">
 </head>
+<audio src="Canso de fons.mp3" autoplay loop ></audio>
 <body>    
     <video class="video-fondo" autoplay loop muted>
         <source src="FonsDePortada.mp4" type="video/mp4">
@@ -14,7 +15,7 @@
     <div class="content">
         <a href="Portada.html"><button class="botones-vuelta">Tornar</button></a>
     </div>
-    <form class="cuadreLlistatCansons" action="codisPHPdeEliminarCanso.php" method="POST" id="formEliminarCanso">
+    <form class="cuadreLlistatCansons" action="codisPHPdeEliminarCanso.php" method="POST" id="formEliminarCanso" enctype="multipart/form-data">
         <h2>Llistat de cançons</h2>
         <ul id="listadoCanciones">
             <?php
@@ -40,11 +41,11 @@
     </div>
     <script>
         let cançoSeleccionada = null;
-        function seleccionarCanso(elemento, nomC) {
+        function seleccionarCanso(element, nomC) {
             if (cançoSeleccionada) {
                 cançoSeleccionada.classList.remove('selected');
             }
-            cançoSeleccionada = elemento;
+            cançoSeleccionada = element;
             cançoSeleccionada.classList.add('selected');
             document.querySelector('.jugarCanço').disabled = false;
             document.querySelector('.eliminarCanço').disabled = false;

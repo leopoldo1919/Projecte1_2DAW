@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="estilsDelProjecte.css">
     <link rel="icon" href="iconoPortada.png" type="image/png">
 </head>
-<audio src="iconos/Canso de fons.mp3" autoplay loop ></audio>
+<audio src="Canso de fons.mp3" autoplay loop ></audio>
 <body class="body_video">    
     <video class="video-fondo" autoplay loop muted>
         <source src="FonsDePortada.mp4" type="video/mp4">
@@ -18,21 +18,27 @@
 
     </div>
     
-    <form class="from_afegirCanço" action="codisPHPdeAfegirCanso.php" method="post">
+    
+    <form class="from_afegirCanço"action="codisPHPdeAfegirCanso.php" method="POST" enctype="multipart/form-data">
         <h2>
             Afegeix una canço
         </h2>
         <div class="Nom_canço">
-            <input class="input_class" name="nomC" type="text" placeholder="Nom de la canço" required>
+            <label for="nomC" class="indicacio">Nom de la canço:</label>
+            <input class="input_class"type="text" name="nomC" id="nomC" placeholder="Nom canço" required><br>
         </div>
         <div class="Nom_canço">
-            <label for="musica" class="indicacio">Musica</label>
-            <input class="file_buton" name="musica" type="file" required>
-            <label for="video" class="indicacio">Video</label>
-            <input class="file_buton" name="video" type="file" required>
-            <label for="imatge" class="indicacio">Imatge</label>
-            <input class="file_buton" name="imatge" type="file" required>
-            <input class="input_submit" type="submit" title="pujar la canço" value="Afegir la canço">  
+
+            <label for="imatge" class="indicacio">Imatge:</label>
+            <input type="file" class="file_buton" name="imatge" id="imatge" accept="image/*"><br>
+
+            <label for="musica" class="indicacio">Musica:</label>
+            <input type="file" class="file_buton" name="musica" id="musica" accept="audio/*"><br>
+
+            <label for="video" class="indicacio">Video:</label>
+            <input type="file" class="file_buton" name="video" id="video" accept="video/*"><br>
+
+            <input class="input_submit" type="submit" value="Pujar">
         </div>
     </form>
     

@@ -1,1 +1,20 @@
-[{"nomC":"Rock","imatge":".\/iconos\/AmericanIdiot.png","musica":".\/iconos\/American Idiot.mp3","video":".\/iconos\/American IdiotVideo.mp4"},{"nomC":"Batalla final","imatge":".\/iconos\/FinalBoss.png","musica":".\/iconos\/FinalBoss.mp3","video":".\/iconos\/Batalla final.mp4"},{"nomC":"Ultra instint","imatge":".\/iconos\/bolaDeDrac.png","musica":".\/iconos\/Sparking! ZERO.mp3","video":".\/iconos\/Sparking! ZERO.mp4"}]
+[
+    {
+        "nomC": "Ultra instint",
+        "imatge": ".\/iconos\/Ultra instint.png",
+        "musica": ".\/iconos\/Ultra instint.mp3",
+        "video": ".\/iconos\/Ultra instint.mp4"
+    },
+    {
+        "nomC": "Batalla Final",
+        "imatge": ".\/iconos\/Batalla Final.png",
+        "musica": ".\/iconos\/Batalla Final.mp3",
+        "video": ".\/iconos\/Batalla final.mp4"
+    },
+    {
+        "nomC": "Mon amour",
+        "imatge": ".\/iconos\/Mon amour.png",
+        "musica": ".\/iconos\/Mon amour.mp3",
+        "video": ".\/iconos\/Mon amour.mp4"
+    }
+]
