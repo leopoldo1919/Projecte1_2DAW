@@ -129,12 +129,12 @@ body{
   box-shadow: 0 0 20px #0004;
   background-color: #fff9;
 }
-.Nom_canço{
+.Nom_canço,.Nom_canço_AEditar{
   padding: 10px 20px;
   display: grid;
   align-items: center;
 }
-.from_afegirCanço{
+.from_afegirCanço,.from_EditarCanço {
   background-image: linear-gradient(to left, #4aeaffaa,#4AEAFFaa, #FF81FFaa,#FF81FFaa,#FFD655aa,#FFD655aa,#4AEAFFaa,#4AEAFFaa);    
   background-clip: padding-box;
   animation: color 2s linear infinite;
@@ -145,6 +145,9 @@ body{
   box-shadow: 0px 0px 60px #000f;
   margin-top: 150px;
 }
+.from_EditarCanço {
+  margin-top: 100px
+}
 .cuadreRanking, .cuadreLlistatCansons{
   background-image: linear-gradient(to left, #4aeaffaa,#4AEAFFaa, #FF81FFaa,#FF81FFaa,#FFD655aa,#FFD655aa,#4AEAFFaa,#4AEAFFaa);    
   background-clip: padding-box;
@@ -152,7 +155,7 @@ body{
   background-size: 500%;
   padding: 40px 0;
   max-width: 600px;
-  max-height: 250px;
+  max-height: 300px;
   margin: auto;
   box-shadow: 0px 0px 60px #000f;
   margin-top: 150px;
@@ -207,4 +210,35 @@ h2{
   transform: translateY(4px);
   text-transform: uppercase;
   font-weight: bold;
+}
+.canso-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.canso-item img {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+}
+.canso-detall {
+  flex-grow: 1;
+}
+.canso-item.selected {
+  background-color: #f9b958;
+  padding: 5px;
+  margin: 0px 20px;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.caixaDeBotonsLlistatCançons{
+  margin-top: 20px;
+}
+li{
+  padding: 5px;
 }

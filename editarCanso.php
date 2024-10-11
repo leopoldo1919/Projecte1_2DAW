@@ -14,14 +14,18 @@
 </body>
 <body class="body_principal">
     <div class="content">
-        <a href="Portada.html"><button class="botones-vuelta">tornar</button></a>
+        <a href="LlistatDeCansons.php"><button class="botones-vuelta">tornar</button></a>
 
     </div>
     
-    <form class="from_afegirCanço" action="codisPHPdeAfegirCanso.php" method="post">
+    <form class="from_EditarCanço" action="codisPHPdeEditarCanso.php" method="post"enctype="multipart/form-data">
+
         <h2>
-            Afegeix una canço
+            Editar la canço
         </h2>
+        <div class="Nom_canço_AEditar">
+            <input class="input_class" name="nomEdit" type="text" placeholder="Nom de la canço que vols editar" required>
+        </div>
         <div class="Nom_canço">
             <input class="input_class" name="nomC" type="text" placeholder="Nom de la canço" required>
         </div>
@@ -32,7 +36,7 @@
             <input class="file_buton" name="video" type="file" required>
             <label for="imatge" class="indicacio">Imatge</label>
             <input class="file_buton" name="imatge" type="file" required>
-            <input class="input_submit" type="submit" title="pujar la canço" value="Afegir la canço">  
+            <input class="input_submit" type="submit" title="pujar la canço" value="Editar la canço">  
         </div>
     </form>
     
