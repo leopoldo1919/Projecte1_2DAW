@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="estilsDelProjecte.css">
     <link rel="icon" href="iconoPortada.png" type="image/png">
 </head>
-<audio src="Canso de fons.mp3" autoplay loop ></audio>
+<audio src="Canso de fons.mp3" autoplay loop></audio>
 <body>    
     <video class="video-fondo" autoplay loop muted>
         <source src="FonsDePortada.mp4" type="video/mp4">
@@ -35,12 +35,14 @@
         <input type="hidden" name="nomC" id="nomC">
     </form>
     <div class="caixaDeBotonsLlistatCançons">
-        <a href="Joc.html"><button class="jugarCanço" disabled>Jugar amb la cançó</button></a>
+        <button class="jugarCanço" disabled onclick="iniciarJuego()">Jugar amb la cançó</button>
         <a href="editarCanso.php"><button class="editarCanço">Editar cançó</button></a>
         <button class="eliminarCanço" disabled type="submit" form="formEliminarCanso">Eliminar cançó</button>
     </div>
+
     <script>
         let cançoSeleccionada = null;
+
         function seleccionarCanso(element, nomC) {
             if (cançoSeleccionada) {
                 cançoSeleccionada.classList.remove('selected');
@@ -50,6 +52,20 @@
             document.querySelector('.jugarCanço').disabled = false;
             document.querySelector('.eliminarCanço').disabled = false;
             document.getElementById('nomC').value = nomC;
+        }
+
+        function iniciarJuego() {
+            const cancionSeleccionada = document.getElementById('nomC').value;
+
+            if (cancionSeleccionada) {
+                const nombreJugador = prompt('Por favor, introduce tu nombre:');
+                
+                if (nombreJugador) {
+                    window.location.href = `Joc.php?cancion=${encodeURIComponent(cancionSeleccionada)}&jugador=${encodeURIComponent(nombreJugador)}`;
+                }
+            } else {
+                alert('Primero selecciona una canción.');
+            }
         }
     </script>
 </body>
