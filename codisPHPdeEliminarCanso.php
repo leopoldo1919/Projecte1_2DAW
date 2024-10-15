@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cansonsFiltrades = array_filter($cansons, function($canso) use ($nomC) {
         return $canso['nomC'] !== $nomC;
     });
-    $extensions = ['png', 'mp3', 'mp4'];
+    $extensions = ['png', 'mp3', 'mp4', 'txt'];
     foreach ($extensions as $ext) {
         $filePath = $iconosDir . $nomC . '.' . $ext;
         if (file_exists($filePath)) {

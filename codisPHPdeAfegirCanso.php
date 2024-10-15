@@ -1,6 +1,6 @@
 <?php
 $nomC = $_POST["nomC"];
-$uploaded_files = ["imatge", "musica", "video"];
+$uploaded_files = ["imatge", "musica", "video","joc"];
 $target_dir = "./iconos/";
 $file_paths = [];
 foreach ($uploaded_files as $key) {
@@ -19,7 +19,8 @@ $array = array(
     "nomC" => $nomC,
     "imatge" => $file_paths["imatge"] ?? null,
     "musica" => $file_paths["musica"] ?? null,
-    "video" => $file_paths["video"] ?? null
+    "video" => $file_paths["video"] ?? null,
+    "joc" => $file_paths["joc"] ?? null
 );
 if (file_exists("cansonsGuardades.json")) {
     $contenido = file_get_contents("cansonsGuardades.json");

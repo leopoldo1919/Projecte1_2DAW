@@ -139,14 +139,11 @@ body{
   background-clip: padding-box;
   animation: color 2s linear infinite;
   background-size: 500%;
-  padding: 40px 0;
+  padding: 30px 0;
   max-width: 500px;
   margin: auto;
   box-shadow: 0px 0px 60px #000f;
-  margin-top: 50px;
-}
-.from_EditarCanço {
-  margin-top: 100px
+  margin-top: 0;
 }
 .cuadreRanking, .cuadreLlistatCansons{
   background-image: linear-gradient(to left, #4aeaffaa,#4AEAFFaa, #FF81FFaa,#FF81FFaa,#FFD655aa,#FFD655aa,#4AEAFFaa,#4AEAFFaa);    
@@ -242,3 +239,31 @@ button:disabled {
 li{
   padding: 5px;
 }
+.listadoCanciones {
+  max-height: 200px;
+  overflow-y: hidden;
+  padding: 5px;
+  display: block;
+}
+
+.listadoCanciones ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.canso-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.canso-item:hover {
+  background-color: #f9b958;
+}
+
+.listadoCanciones:hover {
+  overflow-y: auto;
+}
+

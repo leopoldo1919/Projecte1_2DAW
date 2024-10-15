@@ -30,13 +30,16 @@
         <div class="Nom_canço">
 
             <label for="imatge" class="indicacio">Imatge:</label>
-            <input type="file" class="file_buton" name="imatge" id="imatge" accept="image/*"><br>
+            <input type="file" class="file_buton" name="imatge" id="imatge" accept=".png" required><br>
 
             <label for="musica" class="indicacio">Musica:</label>
-            <input type="file" class="file_buton" name="musica" id="musica" accept="audio/*"><br>
+            <input type="file" class="file_buton" name="musica" id="musica" accept=".mp3" required><br>
 
             <label for="video" class="indicacio">Video:</label>
-            <input type="file" class="file_buton" name="video" id="video" accept="video/*"><br>
+            <input type="file" class="file_buton" name="video" id="video" accept=".mp4" required><br>
+
+            <label for="joc" class="indicacio">Arxiu Joc:</label>
+            <input type="file" class="file_buton" name="joc" id="joc" accept=".txt" required><br>
 
             <input class="input_submit" type="submit" value="Pujar">
         </div>

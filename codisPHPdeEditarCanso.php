@@ -17,7 +17,7 @@ if (move_uploaded_file($_FILES["imatgeNou"]["tmp_name"], $imatgeNou) &&
 
         foreach ($data as &$canso) {
             if ($canso["nomC"] === $nomEdit) {
-                $extensions = ['png', 'mp3', 'mp4'];
+                $extensions = ['png', 'mp3', 'mp4','txt'];
                 foreach ($extensions as $ext) {
                     $filePath = $iconosDir . $nomEdit . '.' . $ext;
                     if (file_exists($filePath)) {

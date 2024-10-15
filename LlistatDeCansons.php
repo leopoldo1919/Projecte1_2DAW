@@ -17,22 +17,24 @@
     </div>
     <form class="cuadreLlistatCansons" action="codisPHPdeEliminarCanso.php" method="POST" id="formEliminarCanso" enctype="multipart/form-data">
         <h2>Llistat de cançons</h2>
-        <ul id="listadoCanciones">
-            <?php
-                $jsonFile = 'cansonsGuardades.json';
-                $jsonData = file_get_contents($jsonFile);
-                $canciones = json_decode($jsonData, true);
-                foreach ($canciones as $canso) {
-                    echo '<li class="canso-item" onclick="seleccionarCanso(this, \''. $canso['nomC'] .'\')">';
-                    echo '<img src="'. $canso['imatge'] .'" alt="Icono de '. $canso['nomC'] .'">';
-                    echo '<div class="canso-detall">';
-                    echo '<p>'. $canso['nomC'] .'</p>';
-                    echo '</div>';
-                    echo '</li>';
-                }
-            ?>
-        </ul>
+        <div class="listadoCanciones">
+            <ul>
+                <?php
+                    $jsonFile = 'cansonsGuardades.json';
+                    $jsonData = file_get_contents($jsonFile);
+                    $canciones = json_decode($jsonData, true);
+                    foreach ($canciones as $canso) {
+                        echo '<li class="canso-item" onclick="seleccionarCanso(this, \''. $canso['nomC'] .'\')">';
+                        echo '<img src="'. $canso['imatge'] .'" alt="Icono de '. $canso['nomC'] .'">';
+                        echo '<div class="canso-detall">';
+                        echo '<p>'. $canso['nomC'] .'</p>';
+                        echo '</div>';
+                        echo '</li>';
+                    }
+                ?>
+            </ul>
         <input type="hidden" name="nomC" id="nomC">
+        </div>
     </form>
     <div class="caixaDeBotonsLlistatCançons">
         <button class="jugarCanço" disabled onclick="iniciarJuego()">Jugar amb la cançó</button>

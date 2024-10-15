@@ -28,10 +28,11 @@
                 echo '</audio>';
         ?>
     </div>
-
     <div class="recuadrePuntuacio">
         <?php
-        echo '<h2>Puntuacio actual</h2>'
+        echo '<h2>'. $cancion . '</h2>';
+        echo '<h3>Puntuacio actual</h3>';
+        
         ?>
     </div>
 </body>
