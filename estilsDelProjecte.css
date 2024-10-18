@@ -21,7 +21,7 @@ body{
   background: linear-gradient(transparent,#000, transparent);
 }
 
-.botones-portada{
+.botones-portada,.boton-cancion{
     padding: 20px;
     font-size: 20px;
     cursor: pointer;
@@ -40,14 +40,14 @@ body{
     text-transform: uppercase;
     font-weight: bold;
 }
-.botones-portada:hover {
+.botones-portada:hover,.boton-cancion:hover {
   background-color: #29ff50;
   background-image: none;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.botones-portada:active {
+.botones-portada:active,.boton-cancion:active {
   background-color: #29ff50;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
@@ -145,7 +145,7 @@ body{
   box-shadow: 0px 0px 60px #000f;
   margin-top: 0;
 }
-.cuadreRanking, .cuadreLlistatCansons{
+.cuadreRanking, .cuadreLlistatCansons,.veureRanking{
   background-image: linear-gradient(to left, #4aeaffaa,#4AEAFFaa, #FF81FFaa,#FF81FFaa,#FFD655aa,#FFD655aa,#4AEAFFaa,#4AEAFFaa);    
   background-clip: padding-box;
   animation: color 2s linear infinite;
@@ -157,6 +157,9 @@ body{
   box-shadow: 0px 0px 60px #000f;
   margin-top: 150px;
   font-weight: bold;
+}
+.cuadreRanking{
+  max-width: 900px;
 }
 h2{
   text-align: center;
@@ -239,14 +242,14 @@ button:disabled {
 li{
   padding: 5px;
 }
-.listadoCanciones {
+.listadoCanciones,.Ranking {
   max-height: 200px;
   overflow-y: hidden;
   padding: 5px;
   display: block;
 }
 
-.listadoCanciones ul {
+.listadoCanciones ul,.Ranking ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -256,14 +259,110 @@ li{
   display: flex;
   align-items: center;
   padding: 5px;
-  cursor: pointer;
 }
 
 .canso-item:hover {
   background-color: #f9b958;
 }
 
-.listadoCanciones:hover {
+.listadoCanciones:hover ,.Ranking:hover{
   overflow-y: auto;
+}
+.icono-cancion {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px; 
+  vertical-align: middle;
+}
+.boton-cancion {
+  width: 600px;
+  margin: 10px 50px;
+}
+.caixa-cansons {
+  display: flex;
+  justify-content: center;
+}
+.cuadreRanking{
+  margin-top: 10px;
+  max-height: 500px;
+  height: 500px;
+}
+.Ranking{
+  margin-top: 10px;
+  max-height: 500px;
+  height: 350px;
+}
+
+
+
+.veureRanking h1, .veureRanking h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.lista-ranking {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.lista-ranking li,.llegendaRanking {
+  background-color: #00000088;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.lista-ranking .posicion,.Posicio {
+  font-weight: bold;
+  color: #f1c40f;
+}
+.posicion,.Posicio{
+  margin-left: 20px;
+
+}
+.posicion{
+  margin-left: 40px;
+
+}
+.jugador{
+  margin-left: 30px;
+}
+.puntuacion{
+  margin-right: 25px;
+}
+.rango,.RangDelJugador {
+  margin-right: 20px;
+
+}
+.rango{
+  margin-right: 40px;
+
+}
+.lista-ranking .jugador,.NomJugador {
+  font-weight: bold;
+  color: #ecf0f1;
+}
+.lista-ranking .puntuacion,.Puntuacio {
+  color: #19dc5a;
+}
+.lista-ranking .rango,.RangDelJugador {
+  color: #ff6a25;
+}
+.veureRanking{
+  margin-top: 50px;
+  width: 900px;
+  max-width: 900px;
+}
+
+
+.tecla-guia.correcta {
+  background-color: #4caf50;  /* Cambiar a verde cuando la tecla es correcta */
+  color: white;
 }
 
