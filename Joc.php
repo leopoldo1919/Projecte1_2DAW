@@ -120,8 +120,6 @@ function actualizarPuntuacion(teclaPresionada) {
         document.getElementById(`tecla-${teclaActual}`).classList.add('correcta');
         puntuacion += 100; 
         aciertos++;
-        teclaActual++;
-        crearTeclas();
     } else {
         puntuacion -= 50; 
         errores++;
@@ -187,16 +185,17 @@ function resaltarTeclaEnTiempo() {
         console.log(`Tiempo actual: ${tiempoActual}`);
 
         const teclasGuia = document.querySelectorAll('.tecla-guia');
-        teclasGuia.forEach((teclaObj, index) => {
-            if (tiempoActual >= teclas[teclaActual + index].tiempo_inicio && tiempoActual <= teclas[teclaActual + index].tiempo_fin) {
-                teclaObj.classList.add('resaltada');  
+        if (teclaActual < teclas.length) {
+            if (tiempoActual >= teclas[teclaActual].tiempo_inicio && tiempoActual <= teclas[teclaActual].tiempo_fin) {
+                teclasGuia[0].classList.add('resaltada'); 
             } else {
-                teclaObj.classList.remove('resaltada');  
-                if (teclaObj.classList.contains('correcta')) {
-                    teclaObj.classList.remove('correcta');
-                }
+                teclasGuia[0].classList.remove('resaltada');  
             }
-        });
+        }
+        if (teclaActual + 1 < teclas.length && tiempoActual > teclas[teclaActual].tiempo_fin) {
+            teclaActual++;
+            crearTeclas(); 
+        }
     }, 100);  
 }
 
